@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vignesh D - Portfolio</title>
+    <style>
+        :root {
+            --background: #ffffff;
+            --foreground: #000000;
+            --primary: #3b82f6;
+            --primary-foreground: #ffffff;
+            --muted: #f3f4f6;
+            --muted-foreground: #6b7280;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.5;
+            color: var(--foreground);
+            background-color: var(--background);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--muted);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 4rem;
+        }
+        .nav-links {
+            display: none;
+        }
+        .nav-links a {
+            color: var(--muted-foreground);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        .menu-button {
+            display: block;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        main {
+            padding: 2rem 0;
+        }
+        section {
+            margin-bottom: 4rem;
+        }
+        h1, h2 {
+            margin-bottom: 1rem;
+        }
+        .hero {
+            display: grid;
+            gap: 2rem;
+        }
+        .profile-image {
+            width: 100%;
+            max-width: 300px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(59, 130, 246, 0.1);
+        }
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            text-decoration: none;
+            border-radius: 0.25rem;
+            font-weight: bold;
+        }
+        .button-outline {
+            background-color: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+        .social-links a {
+            color: var(--muted-foreground);
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+        .card {
+            background-color: var(--muted);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .card-description {
+            color: var(--muted-foreground);
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+        .tabs {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .tab {
+            padding: 0.5rem 1rem;
+            background-color: var(--muted);
+            border: none;
+            cursor: pointer;
+        }
+        .tab.active {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        footer {
+            background-color: var(--muted);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--muted-foreground);
+        }
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+            .menu-button {
+                display: none;
+            }
+            .hero {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+            .skills-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Vignesh D</a>
+            <button class="menu-button" id="menuButton">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#certifications">Certifications</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="about" class="hero">
+            <div>
+                <h1>Full Stack Developer & ML Engineer</h1>
+                <p>Passionate about creating efficient, scalable solutions and exploring new technologies.</p>
+                <div>
+                    <a href="mailto:vigneshofficial.in@gmail.com" class="button">Contact</a>
+                    <a href="#" class="button button-outline">Resume</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Vignesh2003">GitHub</a>
+                    <a href="https://linkedin.com/in/vignesh-d-538833214">LinkedIn</a>
+                    <a href="tel:+918870996008">Phone</a>
+                </div>
+            </div>
+            <div>
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/vignesh%20photo-min.jpg-ND8kLouEjQgZpiNXWkmfqhj6O03UDy.jpeg" alt="Profile photo" class="profile-image">
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="card">
+                    <div class="card-title">Languages</div>
+                    <div class="card-description">C, C++, Java, Python, SQL, MongoDB, HTML/CSS, JavaScript</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Frameworks</div>
+                    <div class="card-description">React, Node.js, Flask, WordPress</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Libraries</div>
+                    <div class="card-description">Tensorflow, Pandas, NumPy, Matplotlib, NLTK</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Software</div>
+                    <div class="card-description">Power BI, Adobe Photoshop, Premier Pro, Figma, Coreldraw</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="tabs">
+                <button class="tab active" data-tab="experience">Experience</button>
+                <button class="tab" data-tab="projects">Projects</button>
+            </div>
+            <div id="experienceContent" class="tab-content active">
+                <div class="card">
+                    <div class="card-title">Full Stack Developer</div>
+                    <div class="card-description">The Website Makers | Sept 2023 - Nov 2023</div>
+                    <ul>
+                        <li>Boosted user engagement by 20% across 5+ web apps</li>
+                        <li>Reduced server response times by 30%</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-title">Python and NLP Developer</div>
+                    <div class="card-description">NIT Tiruchirappalli | May 2023 - Aug 2023</div>
+                    <ul>
+                        <li>Developed ILETT with 95% accuracy</li>
+                        <li>Enhanced processing by 40%</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="projectsContent" class="tab-content">
+                <div class="card">
+                    <div class="card-title">Emaction - Hardware Device</div>
+                    <div class="card-description">Nov 2023 - Mar 2024</div>
+                    <p>Biometric identification system using face and iris recognition</p>
+                </div>
+                <div class="card">
+                    <div class="card-title">Darkcluster - Chrome Extension</div>
+                    <div class="card-description">Oct 2023 - Feb 2024</div>
+                    <p>Cut user complaints by 50% with deceptive practice detection</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <div class="card">
+                <div class="card-title">International Hackathon - 2nd Prize</div>
+                <div class="card-description">IIT Madras E-cell and Accenture | March 2024</div>
+                <p>Created a device for urban heat island mitigation with 97% accuracy</p>
+            </div>
+            <div class="card">
+                <div class="card-title">Global Hackathon - 2nd Place</div>
+                <div class="card-description">Temenos and AARUSH SRM KTR | September 2023</div>
+                <p>Implemented Farm Sense system with 90% accuracy in monitoring</p>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <div class="skills-grid">
+                <div class="card">
+                    <div class="card-title">NPTEL: Cloud Computing Elite</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">ServiceNow: Micro Certification</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">European Open University: Software Engineering</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Cisco Thingqbator: Mobile App Development</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">LinkedIn Learning: Prompt Engineering</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Oracle University: Project Management</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Vignesh D. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.getElementById('menuButton');
+        const navLinks = document.getElementById('navLinks');
+        menuButton.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Tabs functionality
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.getAttribute('data-tab');
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(`${tabId}Content`).classList.add('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
